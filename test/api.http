@@ -176,12 +176,12 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/roles/4
+PUT http://localhost:3000/api/roles/5
 
 {
     "name" : "admin"
 }
 ###
-DELETE http://localhost:3000/api/roles/4
+DELETE http://localhost:3000/api/roles/5
 
 ###
