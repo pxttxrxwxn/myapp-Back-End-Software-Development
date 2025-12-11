@@ -1,0 +1,151 @@
+# 20/11/2025
+# ###
+# Get http://localhost:3000/api/users
+
+# ###
+# Get http://localhost:3000/api/users/10
+
+# ###
+# Get http://localhost:3000/api/users/5
+
+# ###
+# POST http://localhost:3000/api/users
+
+# {
+#     "name" : "Jhon",
+#     "age" : 19
+# }
+# ###
+# Get http://localhost:3000/api/products
+
+# ###
+# Get http://localhost:3000/api/products/1
+
+# ###
+# POST http://localhost:3000/api/products
+
+# {
+#     "nameproducts" : "lay"
+# }
+
+# ###
+# PUT http://localhost:3000/api/products/1
+
+# {
+#     "nameproducts" : "tasto"
+# }
+
+# ###
+# DELETE http://localhost:3000/api/products/1
+
+# ###
+
+
+# 27/11/2025
+# ###
+# GET http://localhost:3000/api/users
+
+# ###
+# GET http://localhost:3000/api/roles
+
+# ###
+# GET http://localhost:3000/api/users/10
+
+# ###
+# // สร้าง user ใหม่ที่ถูกต้อง
+# POST http://localhost:3000/api/users
+# Content-Type: application/json
+
+# {
+#     "name" : "Jhon Doe" ,
+#     "email" : "jhon@doe.com"
+# }
+
+# ###
+# // สร้าง user ใหม่ที่ไม่ถูกต้อง  email format ผิด
+# POST http://localhost:3000/api/users
+# Content-Type: application/json
+
+# {
+#     "name" : "Jhon Doe" ,
+#     "email" : "jhon@doe",
+#     "phone" : "123456780"
+# }
+
+# ###
+# GET http://localhost:3000/api/products
+
+# ###
+# POST  http://localhost:3000/api/products
+# Content-Type: application/json
+
+# {
+#     "idproduct" : 10001 ,
+#     "nameproduct" : "tasto" ,
+#     "price" : "20.00" ,
+#     "cost" : "17.75" ,
+#     "note" : ""
+# }
+
+# ###
+# POST  http://localhost:3000/api/products
+# Content-Type: application/json
+
+# {
+#     "idproduct" : 1002 ,
+#     "nameproduct" : "Coca-Cola" ,
+#     "price" : "20.50" ,
+#     "cost" : "17" ,
+#     "note" : ""
+# }
+
+# ###
+
+# 11/12/2025
+###
+GET http://localhost:3000/api/users
+
+###
+GET http://localhost:3000/api/users/1
+
+###
+// ทดสอบกรณีที่ user ไม่พบ
+GET http://localhost:3000/api/users/999
+
+###
+###
+// สร้าง user ใหม่ที่ถูกต้อง
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username" : "user03" ,
+    "password" : "user1234",
+    "firstname": "user01firstname",
+    "lastname": "user01lastname"
+}
+
+###
+// สร้าง user ใหม่ที่ไม่ถูกต้อง
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "password" : "user1234",
+    "firstname": "user01firstname",
+    "lastname": "user01lastname"
+}
+
+###
+PUT http://localhost:3000/api/users/6
+
+{
+    "username": "user0",
+    "password" : "",
+    "firstname": "",
+    "lastname": ""
+}
+###
+DELETE http://localhost:3000/api/users/7
+
+###
