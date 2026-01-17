@@ -3,6 +3,7 @@ import { Hono } from 'hono'
 import usersRoutes from './users/index.js'
 import rolesRoutes from './roles/index.js'
 import productsRoutes from './products/index.js'
+import prescriptionRoutes from './prescription/index.js'
 
 //import database
 import db from './db/index.js'
@@ -104,10 +105,13 @@ app.delete('/api/products/:id',async (c) => {
 
 
 // 11/12/2025
-
+app.get('/', (c) => {
+  return c.text('Hello Hono!')
+})
 app.route('/api/users', usersRoutes)
 app.route('/api/roles', rolesRoutes)
 app.route('/api/products', productsRoutes)
+app.route('/api/prescription', prescriptionRoutes)
 
 
 serve({
