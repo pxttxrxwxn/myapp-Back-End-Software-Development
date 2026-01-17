@@ -194,24 +194,23 @@ GET http://localhost:3000/api/prescription
 GET http://localhost:3000/api/prescription/1
 
 ###
-// ทดสอบกรณีที่ user ไม่พบ
+// ทดสอบกรณีที่ prescription ไม่พบ
 GET http://localhost:3000/api/prescription/999
 
 ###
-###
-// สร้าง user ใหม่ที่ถูกต้อง
+// สร้าง prescription ใหม่ที่ถูกต้อง
 POST http://localhost:3000/api/prescription
 Content-Type: application/json
 
 {
     "date" : "2026-01-16" ,
-    "medicinename" : "Amoxicillin",
-    "dosage": "500 mg",
-    "notes": "every 8 hours"
+    "medicinename" : "Ibuprofen",
+    "dosage": "400 mg",
+    "notes": "having pain"
 }
 
 ###
-// สร้าง user ใหม่ที่ไม่ถูกต้อง
+// สร้าง prescription ใหม่ที่ไม่ถูกต้อง
 POST http://localhost:3000/api/prescription
 Content-Type: application/json
 
@@ -223,15 +222,16 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/prescription/2
+PUT http://localhost:3000/api/prescription/4
 
 {
     "date" : "2026-01-16" ,
-    "medicinename" : "Amoxicillin",
-    "dosage": "500 mg",
-    "notes": "every 8 hours"
+    "medicinename" : "Ibuprofen",
+    "dosage": "400 mg",
+    "notes": "having pain"
 }
 ###
-DELETE http://localhost:3000/api/prescription/2
+
+DELETE http://localhost:3000/api/prescription/4
 
 ###
